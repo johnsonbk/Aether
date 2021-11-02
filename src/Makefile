@@ -6,7 +6,7 @@ LINK.CPP = g++
 AR = ar -rs
 
 # FLAGS = -O3 -ffast-math -c -I/opt/local/include
-FLAGS = -c -I/opt/local/include
+FLAGS = -c -I/Users/johnsonb/miniconda3/envs/aether-netcdf-armadillo/include -std=c++11
 
 .SUFFICES:
 .SUFFICES: .cpp .o
@@ -71,7 +71,7 @@ LIB: ${CLASSES} ${OBJECTS}
 
 
 Aether: ${MAIN} LIB
-	${LINK.CPP} -o aether.exe ${MAIN} ${MY_LIB} -L../lib -L/opt/local/lib -lnetcdf-cxx4 #-lmsis
+	${LINK.CPP} -o aether.exe ${MAIN} ${MY_LIB} -L../lib -L/Users/johnsonb/miniconda3/envs/aether-netcdf-armadillo/lib -lnetcdf-cxx4 #-lmsis
 
 test: ${TEST} LIB
 	${LINK.CPP} -o test.exe ${TEST} ${MY_LIB} -L../lib

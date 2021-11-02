@@ -47,7 +47,7 @@ double time_int_to_real(std::vector<int> itime) {
   int nDays = day_of_year(itime[0], itime[1], itime[2])-1;
 
   double timereal =
-    double(itime[6])/1000.0d + // milliseconds
+    double(itime[6])/1000.0 + // milliseconds
     double(itime[5]) + // seconds
     double(itime[4]) * seconds_per_minute +
     double(itime[3]) * seconds_per_hour + 
